@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <title>Contact us</title>
+  </head>
+  <body>
+    <img src="../static/images/bg.svg" alt="Background" />
+    <div class="container">
+      <div class="content">
+        <div class="header">
+          <p class="title">Contact us</p>
+          <p>Contact us for a quote, help or to join he team.</p>
+        </div>
+        <div class="details">
+          <div class="address">
+            <p>Address</p>
+            <p class="desc">
+              15, Jalan Nopal 9, <br />
+              Kuala Lumpur
+            </p>
+          </div>
+          <div class="contact">
+            <p>Contact</p>
+            <p class="desc">
+              +6017-4701159 <br />
+              adibnawfal@gmail.com
+            </p>
+          </div>
+        </div>
+        <div class="form">
+          <p class="title">Get a quote</p>
+          <form>
+            <div class="form-control">
+              <input
+                type="text"
+                placeholder="Name"
+                id="name"
+                data-lpignore="true"
+              />
+            </div>
+            <div class="form-control">
+              <input
+                type="email"
+                placeholder="Email Address"
+                id="email"
+                data-lpignore="true"
+              />
+            </div>
+          </form>
+          <div class="textarea-control">
+            <textarea placeholder="Message" rows="4"></textarea>
+          </div>
+          <form>
+            <input type="submit" value="Send" class="submit" />
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
