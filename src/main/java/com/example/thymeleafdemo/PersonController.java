@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class PersonController {
 
-	@GetMapping
+	@GetMapping("/test")
 	String getPeople(Model model) {
 		model.addAttribute("something", "Person");
 		model.addAttribute("people",
