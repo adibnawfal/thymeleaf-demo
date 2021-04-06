@@ -32,10 +32,16 @@
         </div>
         <div class="form">
           <p class="title">Get a quote</p>
-          <form>
+          <form
+            action="#"
+            th:action="@{/send}"
+            th:object="${user}"
+            method="POST"
+          >
             <div class="form-control">
               <input
                 type="text"
+                th:field="*{name}"
                 placeholder="Name"
                 id="name"
                 data-lpignore="true"
@@ -44,18 +50,26 @@
             <div class="form-control">
               <input
                 type="email"
+                th:field="*{email}"
                 placeholder="Email Address"
                 id="email"
                 data-lpignore="true"
               />
             </div>
-          </form>
-          <div class="textarea-control">
-            <textarea placeholder="Message" rows="4"></textarea>
-          </div>
-          <form>
             <input type="submit" value="Send" class="submit" />
           </form>
+
+          <!-- <div class="textarea-control">
+            <textarea placeholder="Message" rows="4"></textarea>
+          </div>
+          <form
+            action="#"
+            th:action="@{/send}"
+            th:object="${user}"
+            method="POST"
+          >
+            <input type="submit" value="Send" class="submit" />
+          </form> -->
         </div>
       </div>
     </div>
