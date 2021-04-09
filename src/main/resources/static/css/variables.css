@@ -1,0 +1,20 @@
+:root {
+  /* Color */
+  --primary: #7a4865;
+  --secondary: #3d2c42;
+  --background: #f2f2f2;
+
+  /* Font Size */
+  --small: 1.40625vw; /* 18px */
+  --medium: 1.875vw; /* 24px */
+  --large: 2.8125vw; /* 36px */
+
+  /* Font Weight */
+  --medium: 500;
+  --bold: 700;
+
+  /* Length */
+  --small-l: 1.5625vw; /* 20px */
+  --medium-l: 2.34375vw; /* 30px */
+  --large-l: 4.21875vw; /* 54px */
+}

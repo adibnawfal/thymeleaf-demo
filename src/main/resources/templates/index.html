@@ -3,73 +3,71 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/css" rel="stylesheet" href="css/variables.css" />
     <link type="text/css" rel="stylesheet" href="css/style.css" />
     <title>Contact us</title>
   </head>
   <body>
-    <img src="images/bg.svg" alt="Background" />
     <div class="container">
-      <div class="content">
-        <div class="header">
-          <p class="title">Contact us</p>
-          <p>Contact us for a quote, help or to join he team.</p>
-        </div>
-        <div class="details">
-          <div class="address">
-            <p>Address</p>
-            <p class="desc">
-              15, Jalan Nopal 9, <br />
-              Kuala Lumpur
-            </p>
+      <img src="images/bg.svg" alt="Background" class="bg" />
+      <div class="content-container">
+        <div class="content">
+          <div class="header">
+            <p class="title">Contact us</p>
+            <p>Contact us for a quote, help or to join he team.</p>
           </div>
-          <div class="contact">
-            <p>Contact</p>
-            <p class="desc">
-              +6017-4701159 <br />
-              adibnawfal@gmail.com
-            </p>
-          </div>
-        </div>
-        <div class="form">
-          <p class="title">Get a quote</p>
-          <form
-            action="#"
-            th:action="@{/send}"
-            th:object="${user}"
-            method="POST"
-          >
-            <div class="form-control">
-              <input
-                type="text"
-                th:field="*{name}"
-                placeholder="Name"
-                id="name"
-                data-lpignore="true"
-              />
+          <div class="details">
+            <div class="address">
+              <p>Address</p>
+              <p class="desc">
+                15, Jalan Nopal 9, <br />
+                Kuala Lumpur
+              </p>
             </div>
-            <div class="form-control">
-              <input
-                type="email"
-                th:field="*{email}"
-                placeholder="Email Address"
-                id="email"
-                data-lpignore="true"
-              />
+            <div class="contact">
+              <p>Contact</p>
+              <p class="desc">
+                +6017-4701159 <br />
+                adibnawfal@gmail.com
+              </p>
             </div>
-            <input type="submit" value="Send" class="submit" />
-          </form>
-
-          <!-- <div class="textarea-control">
-            <textarea placeholder="Message" rows="4"></textarea>
           </div>
-          <form
-            action="#"
-            th:action="@{/send}"
-            th:object="${user}"
-            method="POST"
-          >
-            <input type="submit" value="Send" class="submit" />
-          </form> -->
+          <div class="form">
+            <p class="title">Get a quote</p>
+            <form
+              action="#"
+              th:action="@{/send}"
+              th:object="${user}"
+              method="POST"
+            >
+              <div class="form-control">
+                <input
+                  type="text"
+                  placeholder="Name"
+                  id="name"
+                  data-lpignore="true"
+                  th:field="*{name}"
+                />
+              </div>
+              <div class="form-control">
+                <input
+                  type="email"
+                  placeholder="Email Address"
+                  id="email"
+                  data-lpignore="true"
+                  th:field="*{email}"
+                />
+              </div>
+              <div class="form-control">
+                <textarea
+                  placeholder="Message"
+                  rows="4"
+                  th:field="*{message}"
+                ></textarea>
+              </div>
+              <input type="submit" value="Send" class="submit" />
+            </form>
+          </div>
         </div>
       </div>
     </div>
